@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdarg>
+#include "util.h"
 
 template <typename T>
 void findMin(T *arr, int length, T &min, int &idx) {
@@ -11,14 +12,6 @@ void findMin(T *arr, int length, T &min, int &idx) {
         }
     }
     return;
-}
-
-template <typename T>
-void exch(T &a, T &b) {
-    if (a == b) return;
-    T tmp = a;
-    a = b;
-    b = tmp;
 }
 
 template <typename T>
