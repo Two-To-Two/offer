@@ -25,3 +25,16 @@ ListNode* FindKthToTail(ListNode *head, unsigned int k) {
 
     return cursor;
 }
+
+ListNode* FindMidNode(ListNode *head) {
+    if (head == nullptr) return nullptr;
+
+    ListNode *first = head; ListNode *mid = head;
+    bool flag = false;
+    while (first->_next != nullptr) {
+        first = first->_next;
+        if (flag) mid = mid->_next;
+        flag = !flag;
+    }
+    return mid;
+}
